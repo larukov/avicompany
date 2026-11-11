@@ -1,0 +1,13 @@
+.card{
+    box-shadow: 0 0 15px #818181;
+}
+.accordion-item,
+.accordion-header,
+.accordion-button {
+    background-color: rgb(0, 161, 241);
+    border-color: white;
+}
+
+.accordion-header>.accordion-button {
+    background-color: rgb(0, 161, 241);
+}

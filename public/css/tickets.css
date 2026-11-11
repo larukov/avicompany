@@ -1,0 +1,107 @@
+.filters-sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+/* На мобильных сайдбар не прилипает, занимает всю ширину */
+@media (max-width: 991.98px) {
+    .filters-sidebar {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.filters-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filters-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.filters-sidebar::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 3px;
+}
+.number_flights{
+    height: 100px;
+}
+.ticket-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.ticket-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.airline-logo {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+.airline-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #212529;
+}
+.flight-number {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+.flight-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.flight-route {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.flight-duration-line {
+    height: 2px;
+    background: #dee2e6;
+    position: relative;
+    margin: 5px 0;
+}
+.flight-duration-line::before,
+.flight-duration-line::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #0d6efd;
+    border-radius: 50%;
+    top: -3px;
+}
+.flight-duration-line::before { left: 0; }
+.flight-duration-line::after { right: 0; }
+
+/* Адаптив карточки билета */
+@media (max-width: 767.98px) {
+    .flight-route {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .flight-route .text-center[style*="min-width"] {
+        min-width: 0 !important;
+    }
+    .number_flights {
+        height: auto;
+    }
+    .number_flights .col-lg-4 {
+        margin-top: .75rem;
+    }
+    .ticket-card .col-lg-7,
+    .ticket-card .col-lg-3 {
+        margin-top: .75rem;
+    }
+}
+

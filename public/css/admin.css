@@ -1,0 +1,75 @@
+.admin-wrap {
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+.admin-table th {
+    background: #f8f9fa;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: #6c757d;
+}
+
+.admin-table td {
+    vertical-align: middle;
+}
+
+#adminTabContent .tab-pane {
+    animation: adminFade .3s ease;
+}
+
+@keyframes adminFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chart-bar {
+    background: linear-gradient(180deg, #3a7bd5, #5c9be5);
+    border-radius: 4px 4px 0 0;
+}
+
+/* ====== Адаптив админки ====== */
+@media (max-width: 991.98px) {
+    /* Сайдбар админки становится обычным блоком сверху */
+    .admin-sidebar-col {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Карточки стат. по 2 в ряд */
+    .stat-grid .col-6 {
+        padding: .25rem;
+    }
+    /* Заголовки таблиц не распирают */
+    .admin-table th {
+        white-space: nowrap;
+    }
+    .admin-table {
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .admin-table th,
+    .admin-table td {
+        padding: .5rem .4rem;
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .card-header .btn {
+        width: 100%;
+    }
+}
